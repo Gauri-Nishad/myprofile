@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> {% block title %} base{% endblock title %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-...">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+  {% block static %}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+  {% endblock static %}
+ 
+  
+</head> 
+<body>
+
+<div class="navbar-header">
+ <div class="container">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand logo">MyPortfolio</a>
+    
+   
+   
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="http://127.0.0.1:8000" aria-current="page">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#work-experience">Work Experience</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url "projects" %}">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        
+      </ul>
+
+    
+  </div>
+
+</nav>
+</div>
+</div>
+
+
+{% comment %} section1 {% endcomment %}
+{% block contain %}
+
+{% endblock contain %}
+{% comment %} <div class="container">
+  <section>
+    <div class="home-section">
+
+
+      <div class="col-6">
+        <div class="myavtaar">
+        <img class="myimage" src="/static/image/hii-image.jpg">
+        </div>
+      </div>
+    <div class="col-6">
+      <div class="text-div">
+      <p class="text-font">Hii,there</p>
+        <p class="text-font">I'm Gauri Nishad</p>
+          <p class="developer"><strong>A Web Devloper</strong></p>
+          <p>Seasoned Web Developer specializing in creating innovative, high-performance web applications that enhance user engagement and optimize business outcomes.</p>
+
+
+          <a class="resume" href="https://drive.google.com/file/d/1AyhEjAMiicb7MFP4-urGdmnb_xWuuEv_/view?usp=drivesdk" target="_blank">Download Resume <i class="fas fa-external-link-alt"></i></a>
+      </div>
+    </div>
+    
+
+    </div>
+  </section>
+  <hr>
+    <h3 class="about-heading">About Me</h3>
+    <hr>
+
+  <section id="about">
+    
+    <div class="about-section" style="display:flex;">
+      
+        <div class="col-6">
+          <div class="text-div">
+          I am a BSc-IT graduate with 6 months of experience as a Python developer. I am proficient in SQL and skilled in web technologies including Django and Flask. I am passionate about creating efficient software solutions and am committed to continuous learning and growth in the field of software development.
+          </div>
+          </div>
+
+          <div class="col-6">
+            <div class="myavtaar">
+            <img class="myimage2" src="/static/image/avatar.jpg">
+            </div>
+          </div>
+    </div>
+    
+  </section>
+
+
+  <hr>
+  <h3 class="about-heading">Skills</h3>
+  <hr>
+  <section id="skills">
+   
+    <div class="skills-section" style="display:flex;">
+      
+      <div class="col-6">
+        <div class="single-skill-content">
+          <div class="barWrapper">
+            <span class="progressText"><i class="fab fa-html5 icon-of-skills"></i> html</span>
+            <div class="single-progress-txt">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="width: 90%;"></div>
+              </div>
+              <h3 class="progress-percentage">90%</h3>
+            </div>
+          </div>
+          <div class="barWrapper">
+            <span class="progressText"><i class="fab fa-css3-alt icon-of-skills"></i>css</span>
+            <div class="single-progress-txt">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100" style="width: 85%;"></div>
+              </div>
+              <h3 class="progress-percentage">85%</h3>
+            </div>
+          </div>
+          <div class="barWrapper">
+            <span class="progressText"><i class="fab fa-js-square icon-of-skills"></i>javascript</span>
+            <div class="single-progress-txt">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="10" aria-valuemax="100" style="width: 97%;"></div>
+              </div>
+              <h3 class="progress-percentage">97%</h3>
+            </div>
+          </div>
+          <div class="barWrapper">
+            <span class="progressText"><i class="fas fa-code icon-of-skills"></i>jquery,ajax</span>
+            <div class="single-progress-txt">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="width: 90%;"></div>
+              </div>
+              <h3 class="progress-percentage">90%</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-6">
+        <div class="single-skill-content">
+          <div class="barWrapper">
+            <span class="progressText"><i class="fab fa-python icon-of-skills"></i>python</span>
+            <div class="single-progress-txt">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="width: 90%;"></div>
+              </div>
+              <h3 class="progress-percentage">90%</h3>
+            </div>
+          </div>
+          <div class="barWrapper">
+            <span class="progressText"><i class="fas fa-server icon-of-skills"></i>Django</span>
+            <div class="single-progress-txt">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100" style="width: 85%;"></div>
+              </div>
+              <h3 class="progress-percentage">85%</h3>
+            </div>
+          </div>
+          <div class="barWrapper">
+            <span class="progressText"><i class="fas fa-flask icon-of-skills"></i>flask</span>
+            <div class="single-progress-txt">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="10" aria-valuemax="100" style="width: 97%;"></div>
+              </div>
+              <h3 class="progress-percentage">97%</h3>
+            </div>
+          </div>
+          <div class="barWrapper">
+            <span class="progressText"><i class="fas fa-network-wired icon-of-skills"></i>restfulapi</span>
+            <div class="single-progress-txt">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="width: 90%;"></div>
+              </div>
+              <h3 class="progress-percentage">90%</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </section>
+
+  <hr>
+    <h3 class="about-heading">work Experience</h3>
+    <hr>
+    <section id="work-experience">
+      <div class="container">
+        <div class="work-experience-section d-flex">
+
+
+          <div class="col-6">
+            <div class="myavtaar">
+              <img class="work-image rounded-circle" src="/static/image/workimage.avif" alt="Avatar">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="text-div">
+              <h4 style="text-decoration: underline;
+  text-underline-position: under;">Python Trainee</h4>
+              <h5><a href="https://onerooftech.com/index" class="company" title="go to company website">oneroof technologies llp</a></h5>
+              <p style="text-decoration: underline;
+  text-underline-position: under;"><strong>october 2023 - may 2023</strong></p>
+              <ul>
+                <li>Developed a comprehensive investor dashboard project, enhancing user interface and user experience.</li>
+                <li>Created and implemented function-based APIs in Django for efficient data handling and processing.</li>
+                <li>Utilized AJAX and jQuery for dynamic and asynchronous web page updates, improving project responsiveness and interactivity.</li>
+                <li>Integrated PostgreSQL for robust and scalable database connectivity, ensuring secure and efficient data storage and retrieval.</li>
+                <li>Employed ORM queries with Django to interact seamlessly with PostgreSQL, optimizing database operations.</li>
+              </ul>
+            </div>
+          </div>
+         
+        </div>
+        <!-- Add more job experiences here as needed -->
+      </div>
+    </section>
+    
+  <hr>
+  <h3 class="about-heading">Projects</h3>
+  <hr>
+
+  <section id="projects">
+   
+    <div class="projects-section" style="display:flex;">
+             <div class="col-6">
+            <div class="project-text-div">
+              <h3 style="text-decoration: underline;
+  text-underline-position: under; margin-bottom:5%;">Project 1: Investor Dashboard</h3>
+              <p>Developed a comprehensive dashboard aimed at investors for visualizing and analyzing financial data, providing real-time insights and performance metrics. The project was built using Django, which significantly enhanced both the user interface (UI) and user experience (UX).</p>
+              <ul>
+                <li>Created and implemented efficient function-based APIs in Django to handle data processing seamlessly.</li>
+                <li>Leveraged AJAX and jQuery for dynamic and asynchronous updates on web pages, enhancing project responsiveness and interactivity.</li>
+                <li>Integrated PostgreSQL for robust and scalable database connectivity, ensuring secure and efficient data storage and retrieval.</li>
+                <li>Employed Django's ORM queries to seamlessly interact with PostgreSQL, optimizing database operations and improving overall performance.</li>
+              </ul>
+              <p><strong>Technologies Used:</strong> Django, HTML, CSS, JavaScript, jQuery, AJAX, PostgreSQL.</p>
+              <p><strong>Dashboard Development:</strong> Designed and implemented a user-friendly dashboard using Django, providing real-time data visualization and actionable insights for stakeholders.</p>
+              <a class="resume" href="{% url "projects" %}" >see more <i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="myavtaar">
+            <img class="project-avtar" src="/static/image/project-image.jpg">
+            </div>
+          </div>
+    </div>
+    
+  </section>
+
+  <hr>
+  <h3 class="about-heading">Contact</h3>
+  <hr>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-section" style="display: flex;">
+        
+        <div class="col-6">
+          <div class="text-div">
+            <h3 class="cotactme-heading">Contact Me</h3>
+            <p>Feel free to reach out to me. You can use the form below or contact me directly via email or phone.</p>
+  
+          
+            <form class="contact-form" action="#" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="your name">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="your email">
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="your phone number">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="write a message"></textarea>
+              </div>
+              <button type="submit" class="btn form-submit-button">Submit</button>
+            </form>
+          </div>
+        </div>
+  
+        <div class="col-6">
+          <div class="contact-info">
+            <h4 class="cotactme-heading">Contact Information</h4>
+            <ul>
+              <li><strong>Name:</strong> gauri Nishad</li>
+              <li><strong>Phone:</strong>9372488479</li>
+              <li><strong>Email:</strong>gaurinishad18@gmail.com</li>
+            </ul>
+            <div class="social-links">
+              <h4 style="text-decoration: underline;
+  text-underline-position: under;">Social Media</h4>
+           
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://www.facebook.com/gauri.nishad.37625?mibextid=ZbWK" target="_blank"><i class="fab fa-facebook-f social-icon"></i></a></li>
+                <li class="list-inline-item"><a href="https://x.com/gauriramnihal?t=8j7Or_HMbXZJIN9zjDMFPg&s=09" target="_blank"><i class="fab fa-twitter social-icon"></i></a></li>
+                <li class="list-inline-item"><a href=" https://www.linkedin.com/in/gauri-nishad-2a0056219" target="_blank"><i class="fab fa-linkedin-in social-icon"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.instagram.com/gauriramnihal?igsh=ZGF3Y3NzdmttaHEy" target="_blank"><i class="fab fa-instagram social-icon insta"></i></a></li>
+                
+
+             
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  
+  
+</div> {% endcomment %}
+<footer class=" footer-color">
+  <div class="container">
+    <div class="text-center">
+        <p>© Copyright Gauri Nishad. All Rights Reserved.</p>
+    </div>
+</div>
+    </footer>
+    {% block content %}
+    
+    {% endblock content %}
+
+ 
+
+ 
+ 
+  
+{% block script %}
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/static/java_script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+ 
+
+ 
+{% endblock %}
+</body>
+</html>
+
